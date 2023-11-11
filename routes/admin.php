@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(["middleware" => "role:admin"], function(){
-    // Админка
+Route::middleware('auth')->group(function () {
+    Route::group(["middleware" => "role:admin"], function(){
+        // Админка
+    });
 });

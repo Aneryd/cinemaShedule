@@ -21,6 +21,7 @@ docker-compose up -d
 docker exec -it cinemashedule-fpm-1 bash
 composer update
 php artisan migrate:refresh --seed
+php artisan storage:link
 ```
 
 Авторизация сделал с помощью laravel-breeze.

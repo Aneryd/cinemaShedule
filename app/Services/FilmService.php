@@ -10,7 +10,7 @@ use App\Http\Resources\FilmListResource;
 
 class FilmService{
     public function index(){
-        $films = Film::orderBy("created_at", "desc")->with("age_ratings")->paginate();
+        $films = Film::orderBy("created_at", "desc")->with("age_ratings")->paginate(12);
         return view("admin.films.index", compact("films"));
     }
 

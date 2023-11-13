@@ -23,7 +23,7 @@
         <h4>Постер</h4>
         <input type="datetime-local" name="time_date" id="time_date" value="{{ $session->time_date }}" required/>
 
-        <h4>Стоимость</h4>
+        <h4>Стоимость в руб.</h4>
         <input type="text" name="price" id="price" value="{{ $session->price }}" required>
 
         <br>

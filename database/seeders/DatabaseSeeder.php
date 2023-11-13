@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\FilmSeeder;
 use Database\Seeders\RoleSeeder;
 use Database\Seeders\UserSeeder;
+use Database\Seeders\SessionSeeder;
 use Database\Seeders\UserRoleSeeder;
 use Database\Seeders\AgeRatingSeeder;
 
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
             UserRoleSeeder::class,
             AgeRatingSeeder::class,
             FilmSeeder::class,
+            SessionSeeder::class,
         ]);
     }
 }

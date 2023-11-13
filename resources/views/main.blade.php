@@ -14,6 +14,9 @@
             @guest
                 <button><a href="/login">Авторизация</a></button>
             @else
+                @if(auth()->user()->roles[0]->slug == "admin")
+                    <a href="/admin">Админка</a>
+                @endif
                 {{ auth()->user()->name }}
                 <form action="/logout" method="post">
                     @csrf
@@ -42,7 +45,16 @@
 
                     <div style="display: flex;">
                         <p>Стоимость: </p>
-                        <p>{{ $session->price }}</p>
+                        <p>{{ $session->price }}/руб.</p>
+                    </div>
+
+                    <div style="display: flex;">
+                        <p>Продолжительность: </p>
+                        <p>{{ $session->film->duration }}/мин.</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p>Возрастное ограничение: </p>
+                        <p>{{ $session->film->age_ratings->name }}</p>
                     </div>
                 </div>
             </div>
